@@ -1,4 +1,4 @@
-package contacts
+package handlers
 
 import (
 	"encoding/json"

@@ -15,9 +15,10 @@ func GetAll(w http.ResponseWriter, r *http.Request) {
 	}
 	defer db.Close()
 
-	actors := []models.Actor{}
-	db.Find(&actors)
+	var actors []models.Actor
+	db.Raw("select * from actor limit 10").Scan(&actors)
 
+	w.WriteHeader(http.StatusOK)
 	json.NewEncoder(w).Encode(actors)
 }
 

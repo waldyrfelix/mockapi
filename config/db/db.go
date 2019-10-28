@@ -15,9 +15,5 @@ func OpenDb() (db *gorm.DB, err error) {
 		config.DB.Password,
 		config.DB.Name)
 
-	db, err = gorm.Open(config.DB.Dialect, uri)
-
-	db.AutoMigrate()
-
-	return db, err
+	return gorm.Open(config.DB.Dialect, uri)
 }

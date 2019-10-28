@@ -31,7 +31,19 @@ func (a *App) SetRouters() {
 	// a.Delete("/projects/{title}/archive", a.handleRequest(handler.RestoreProject))
 }
 
+// Setup middlewares
+func (a *App) SetMiddlewares() {
+	a.Router.Use(JsonMiddleware)
+}
+
 // Run the app on it's router
 func (a *App) Run(host string) {
 	log.Fatal(http.ListenAndServe(host, a.Router))
+}
+
+func JsonMiddleware(next http.Handler) http.Handler {
+	return http.HandlerFunc(func(w http.ResponseWriter, r *http.Request) {
+		w.Header().Add("Content-Type", "application/json")
+		next.ServeHTTP(w, r)
+	})
 }

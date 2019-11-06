@@ -6,7 +6,7 @@ import (
 )
 
 func main() {
-	fmt.Print("Initializing server... ")
+	fmt.Print("Initializing server...")
 	app := &app.App{}
 	app.SetRouters()
 	app.SetMiddlewares()

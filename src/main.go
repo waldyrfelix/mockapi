@@ -3,7 +3,7 @@ package main
 import (
 	"fmt"
 
-	"github.com/waldyrfelix/mockapi/app"
+	"github.com/waldyrfelix/mockapi/src/app"
 )
 
 func main() {

@@ -2,10 +2,11 @@ package actor
 
 import (
 	"encoding/json"
-	"github.com/waldyrfelix/mockapi/app/models"
-	"github.com/waldyrfelix/mockapi/config/db"
 	"log"
 	"net/http"
+
+	"github.com/waldyrfelix/mockapi/src/app/models"
+	"github.com/waldyrfelix/mockapi/src/config/db"
 )
 
 func GetAll(w http.ResponseWriter, r *http.Request) {

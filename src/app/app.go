@@ -6,7 +6,7 @@ import (
 
 	"github.com/gorilla/mux"
 	"github.com/jinzhu/gorm"
-	"github.com/waldyrfelix/mockapi/app/handlers/actor"
+	"github.com/waldyrfelix/mockapi/src/app/handlers/actor"
 )
 
 // App has router and db instances

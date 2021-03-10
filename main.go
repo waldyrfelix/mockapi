@@ -11,6 +11,8 @@ func main() {
 	app := &app.App{}
 	app.SetRouters()
 	app.SetMiddlewares()
+
 	fmt.Println("Server on localhost:3000.")
-	app.Run(":3000")
+
+	app.Run("0.0.0.0:3000")
 }

@@ -4,7 +4,7 @@ import (
 	"fmt"
 
 	"github.com/jinzhu/gorm"
-	"github.com/waldyrfelix/mockapi/src/config"
+	"github.com/waldyrfelix/mockapi/config"
 )
 
 func OpenDb() (db *gorm.DB, err error) {

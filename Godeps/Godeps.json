@@ -2,6 +2,9 @@
 	"ImportPath": "github.com/waldyrfelix/mockapi",
 	"GoVersion": "go1.16",
 	"GodepVersion": "v80",
+	"Packages": [
+		"./..."
+	],
 	"Deps": [
 		{
 			"ImportPath": "github.com/gorilla/mux",

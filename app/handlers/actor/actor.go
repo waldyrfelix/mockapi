@@ -2,22 +2,23 @@ package actor
 
 import (
 	"encoding/json"
-	"log"
 	"net/http"
 
 	"github.com/waldyrfelix/mockapi/app/models"
-	"github.com/waldyrfelix/mockapi/config/db"
 )
 
 func GetAll(w http.ResponseWriter, r *http.Request) {
-	db, err := db.OpenDb()
-	if err != nil {
-		log.Fatal("Connection failed: ", err)
-	}
-	defer db.Close()
+	// db, err := db.OpenDb()
+	// if err != nil {
+	// 	log.Fatal("Connection failed: ", err)
+	// }
+	// defer db.Close()
 
-	var actors []models.Actor
-	db.Raw("select * from actor limit 10").Scan(&actors)
+	actors := []models.Actor{
+		{ActorId: 1, FirstName: "Marlon", LastName: "Brando"},
+		{ActorId: 2, FirstName: "Morgan", LastName: "Freeman"},
+	}
+	// db.Raw("select * from actor limit 10").Scan(&actors)
 
 	w.WriteHeader(http.StatusOK)
 	json.NewEncoder(w).Encode(actors)

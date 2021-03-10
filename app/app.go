@@ -7,7 +7,6 @@ import (
 	"github.com/gorilla/mux"
 	"github.com/jinzhu/gorm"
 	"github.com/waldyrfelix/mockapi/app/handlers/actor"
-	// "github.com/waldyrfelix/mockapi/app/models"
 )
 
 // App has router and db instances
@@ -16,7 +15,6 @@ type App struct {
 	DB     *gorm.DB
 }
 
-// setRouters sets the all required routers
 func (a *App) SetRouters() {
 	a.Router = mux.NewRouter()
 	a.Router.HandleFunc("/actors", actor.GetAll).Methods("GET")

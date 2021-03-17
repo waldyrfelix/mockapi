@@ -8,6 +8,9 @@ github.com/jinzhu/gorm/dialects/postgres
 # github.com/jinzhu/inflection v1.0.1-0.20210111022912-b5281034e75e
 ## explicit
 github.com/jinzhu/inflection
+# github.com/joho/godotenv v1.3.0
+## explicit
+github.com/joho/godotenv
 # github.com/lib/pq v1.10.0
 ## explicit
 github.com/lib/pq
